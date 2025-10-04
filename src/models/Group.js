@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 
 const GroupSchema = new mongoose.Schema({
-  name: { type: String, required: true }, // e.g., "CS-101"
-  year: { type: Number }, // 2025
-  program: { type: String }, // e.g., "Computer Science"
+  name: { type: String, required: true }, 
+  year: { type: Number }, 
+  program: { type: String }, 
   capacity: { type: Number },
   teachers: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Teacher' }],
   students: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Student' }],
